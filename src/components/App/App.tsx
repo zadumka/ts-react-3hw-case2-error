@@ -14,6 +14,7 @@ export default function App() {
     const [isLoading, setIsLoading] = useState(false);
     const [isError, setIsError] = useState(false);
     const [selectedMovie, setSelectedMovie] = useState<Movie>(null);
+
     const handleSelectMovie = (movie: Movie | null) => {
         setSelectedMovie(movie);
     };
@@ -50,7 +51,7 @@ export default function App() {
                     onClose={() => handleSelectMovie(null)}
                 />
             )}
-            <Toaster position="top-center" />
+            <Toaster position="top-center"/>
         </div>
     );
 }
